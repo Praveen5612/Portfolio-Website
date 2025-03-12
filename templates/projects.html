@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,38 +9,78 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
+    <header class="header">
+        <h1>G Praveen Kumar Reddy</h1>
+        <p>Machine Learning | AI | Python Developer</p>
+        <nav class="navbar">
+            <a href="/">Home</a> |
+            <a href="/projects">Projects</a> |
+            <a href="/contact">Contact</a>
+        </nav>
+    </header>
 
     <header>
-        <h1>My Projects</h1>
-        <p>Check out some of the cool projects I have worked on!</p>
+        <h2>Check out some of the cool projects I have worked on!</h2>
     </header>
 
     <section class="projects-container">
-        <div class="project-card">
-            <h2>AI Story Generator</h2>
-            <p>A multi-modal story generator using AI, integrating Gemini & OpenAI APIs.</p>
+        <div class="project-card" onclick="openModal('AI Story Generator', 'A multi-modal story generator using AI, integrating Gemini & OpenAI APIs. <br><br><a href=\'https://github.com/Praveen5612/story-generator\' target=\'_blank\'>View on GitHub</a>')">
+            <h2 class="project-title">AI Story Generator</h2>
+            <p class="project-description">A multi-modal story generator using AI, integrating Gemini & OpenAI APIs.</p>
         </div>
 
-        <div class="project-card">
-            <h2>Text-to-Image Generation</h2>
-            <p>Using GANs and NLP, this system converts text into realistic images.</p>
+        <div class="project-card" onclick="openModal('Text-to-Image Generation', 'Using GANs and NLP, this system converts text into realistic images. <br><br><a href=\'https://github.com/Praveen5612/Text-to-Image-Generator\' target=\'_blank\'>View on GitHub</a>')">
+            <h2 class="project-title">Text-to-Image Generation</h2>
+            <p class="project-description">Using GANs and NLP, this system converts text into realistic images.</p>
         </div>
 
-        <div class="project-card">
-            <h2>Personalized Food Suggestion</h2>
-            <p>An AI model that recommends food based on user preferences.</p>
+        <div class="project-card" onclick="openModal('Traffic Prediction Model', 'Using machine learning techniques, including feature engineering, visualization, and model evaluation. <br><br><a href=\'https://github.com/Praveen5612/Traffic\' target=\'_blank\'>View on GitHub</a>')">
+            <h2 class="project-title">Traffic Prediction Model</h2>
+            <p class="project-description">Using machine learning techniques, including feature engineering, visualization, and model evaluation.</p>
         </div>
 
-        <div class="project-card">
-            <h2>Anime Recommendation System</h2>
-            <p>Built a data-driven recommendation engine using Python & ML models.</p>
+        <div class="project-card" onclick="openModal('Anime Recommendation System', 'Built a data-driven recommendation engine using Python & ML models. <br><br><a href=\'https://github.com/Praveen5612/Anime-Recommended-System\' target=\'_blank\'>View on GitHub</a>')">
+            <h2 class="project-title">Anime Recommendation System</h2>
+            <p class="project-description">Built a data-driven recommendation engine using Python & ML models.</p>
         </div>
 
-        <div class="project-card">
-            <h2>Stock Price Prediction</h2>
-            <p>Time-series forecasting model using LSTM to predict stock prices.</p>
+        <div class="project-card" onclick="openModal('Health-Care Chatbot', 'Healthcare chatbot predicts conditions, provides advice, and uses Gradio interface. <br><br><a href=\'https://github.com/Praveen5612/Healthcare-chatbot\' target=\'_blank\'>View on GitHub</a>')">
+            <h2 class="project-title">Health-Care Chatbot</h2>
+            <p class="project-description">Healthcare chatbot predicts conditions, provides advice, and uses Gradio interface.</p>
+        </div>
+
+        <div class="project-card" onclick="openModal('Portfolio', 'Portfolio website showcasing projects, skills, Flask backend, and interactive UI. <br><br><a href=\'https://github.com/Praveen5612/Portfolio-Website\' target=\'_blank\'>View on GitHub</a>')">
+            <h2 class="project-title">Portfolio</h2>
+            <p class="project-description">Portfolio website showcasing projects, skills, Flask backend, and interactive UI.</p>
         </div>
     </section>
 
+    <!-- Modal for Displaying Project Details -->
+    <div id="project-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 id="modal-title"></h2>
+            <p id="modal-description"></p>
+        </div>
+    </div>
+
+    <script>
+        function openModal(title, description) {
+            document.getElementById("modal-title").innerHTML = title;
+            document.getElementById("modal-description").innerHTML = description;
+            document.getElementById("project-modal").style.display = "block";
+        }
+
+        function closeModal() {
+            document.getElementById("project-modal").style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            var modal = document.getElementById("project-modal");
+            if (event.target == modal) {
+                closeModal();
+            }
+        }
+    </script>
 </body>
 </html>

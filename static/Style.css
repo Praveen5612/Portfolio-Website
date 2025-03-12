@@ -1,88 +1,234 @@
+/* Reset some default styles */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.about-me {
+    color: #4B5563; /* Change this to your preferred color */
+    font-size: 18px; /* Adjust if needed */
+}
+.about-me h4 {
+    background: linear-gradient(to right, #1E90FF, #FF5733);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.download-btn {
+    background-color: #1E90FF; /* Blue color */
+    color: white;
+    font-size: 18px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease-in-out;
+}
+
+.download-btn:hover {
+    background-color: #155a8a; /* Darker shade on hover */
+}
+
+
+
+
+/* General Body Styling */
 body {
     font-family: Arial, sans-serif;
+    background: url('background.jpg') no-repeat center center fixed;
+    background-size: cover;
     text-align: center;
-    background-color: #f5f5f5;
+    color: #2c3e50;
 }
 
-header {
-    background-color: #333;
+/* Header Section */
+.header {
+    background-color: rgba(44, 62, 80, 0.9);
     color: white;
-    padding: 10px;
+    text-align: center;
+    padding: 20px;
+    font-size: 24px;
+    border-radius: 0 0 15px 15px;
 }
 
-nav a {
+/* Navigation Menu */
+.navbar {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.navbar a {
     color: white;
     text-decoration: none;
-    margin: 0 10px;
+    font-weight: bold;
+    padding: 10px 20px;
+    display: inline-block;
 }
-.profile-pic {
+
+.navbar a:hover {
+    text-decoration: underline;
+}
+
+/* About Section */
+.about-section {
+    background-color: #f2f2f2;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+/* Profile Image Styling */
+.profile-img, .profile-pic {
     width: 150px;
     height: 150px;
     border-radius: 50%;
+    border: 3px solid #2c3e50;
     display: block;
-    margin: 10px auto;
-    border: 3px solid #333;
-}
-.tech-stack {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 10px;
-}
-.tech-stack img {
-    height: 30px;
-}
-/* General Page Styling */
-body {
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    text-align: center;
+    margin: 20px auto;
 }
 
-/* Header */
-header {
-    background-color: #007bff;
-    color: white;
-    padding: 20px;
-    font-size: 24px;
-    font-weight: 600;
-}
-
-/* Projects Container */
-.projects-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    gap: 20px;
     padding: 20px;
 }
 
-/* Individual Project Cards */
-.project-card {
-    background: white;
-    width: 300px;
-    margin: 15px;
+.section {
+    background: rgba(255, 255, 255, 0.85);
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease-in-out;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    text-align: left;
 }
 
-.project-card:hover {
-    transform: scale(1.05);
-}
-
-/* Project Titles */
-.project-card h2 {
-    color: #007bff;
-    font-size: 22px;
+/* Section Headings */
+h2 {
+    color: #2c3e50;
     margin-bottom: 10px;
 }
 
-/* Project Descriptions */
-.project-card p {
+/* List Styling */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    padding: 5px 0;
+}
+
+/* Projects Section */
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+    gap: 20px;
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.project-card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.project-title {
+    color: #1E3A8A;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.project-description {
+    color: #4B5563;
     font-size: 16px;
-    color: #333;
+    line-height: 1.5;
+}
+
+
+
+
+
+
+/* Contact Section */
+.contact-container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    text-align: center;
+}
+
+.contact-container h2 {
+    color: #1E3A8A;
+    margin-bottom: 15px;
+}
+
+.contact-container p {
+    color: #4B5563;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+/* Contact Links */
+.contact-links a {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    color: #1E3A8A;
+    font-weight: bold;
+    margin: 5px 10px;
+    transition: color 0.3s ease-in-out;
+}
+
+.contact-links a:hover {
+    color: #0F172A;
+}
+
+/* Icons */
+.contact-links i {
+    margin-right: 8px;
+}
+
+/* Contact Form */
+.contact-form {
+    margin-top: 20px;
+}
+
+.contact-form input, 
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    background: #1E3A8A;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.contact-form button:hover {
+    background: #0F172A;
 }

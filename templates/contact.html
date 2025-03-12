@@ -6,20 +6,45 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='Style.css') }}">
 </head>
 <body>
-    <header>
-        <h1>Contact Me</h1>
-        <nav>
+    <header class="header">
+        <h1>G Praveen Kumar Reddy</h1>
+        <p>Machine Learning | AI | Python Developer</p>
+        <nav class="navbar">
             <a href="/">Home</a> |
             <a href="/projects">Projects</a> |
             <a href="/contact">Contact</a>
         </nav>
     </header>
 
-    <section>
-        <h2>Get in Touch</h2>
-        <p>Email: praveenreddyg5612@gmail.com </p>
-        <p>GitHub: <a href="https://github.com/Praveen5612">github</a></p>
-        <p>LinkedIn: <a href="www.linkedin.com/in/praveen-reddy-gollapalli-6372a8299">linkedin</a></p>
-    </section>
+    <div class="contact-container">
+        <h2>Contact Me</h2>
+        <p>Email: praveenreddyg5612@gmail.com</p>
+        
+        <div class="contact-links">
+            <a href="https://github.com/Praveen5612" target="_blank">
+                <i class="fab fa-github"></i> GitHub
+            </a>
+            <a href="www.linkedin.com/in/praveen-reddy-gollapalli-6372a8299" target="_blank">
+                <i class="fab fa-linkedin"></i> LinkedIn
+            </a>
+            <a href="https://www.naukri.com/mnjuser/profile?id=&altresid" target="_blank">
+                <i class="fab fa-naukri"></i> Naukri
+            </a>
+        </div>
+    
+        <div class="contact-form">
+            
+
+            <h3>Send a Message</h3>
+            <form action="{{ url_for('contact') }}" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+            
+        </div>
+    </div>
+    
 </body>
 </html>
